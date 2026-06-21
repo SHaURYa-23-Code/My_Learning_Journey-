@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Structural Pseudo-Classes Demo</title>
+  <link rel="stylesheet" href="16.css">
+</head>
+<body>
+
+  <h1>CSS Structural Selectors Demo</h1>
+  <hr>
+
+  <section class="demo-container">
+    <h2>1. Child-Based vs. Type-Based Positions</h2>
+    <div class="mixed-box">
+      <span>I am a Span (The 1st child overall)</span>
+      <p>Paragraph 1 (The 2nd child overall, but 1st Paragraph type).</p>
+      <p>Paragraph 2 (The 3rd child overall, but 2nd Paragraph type).</p>
+      <p>Paragraph 3 (The 4th child overall, but last Paragraph type).</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="demo-container">
+    <h2>2. Nth-Child Styling (Zebra Striping & Formulas)</h2>
+    <ul class="item-list">
+      <li>Row 1 (Odd)</li>
+      <li>Row 2 (Even)</li>
+      <li>Row 3 (Odd / Multiple of 3)</li>
+      <li>Row 4 (Even)</li>
+      <li>Row 5 (Odd)</li>
+      <li>Row 6 (Even / Multiple of 3)</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section class="demo-container">
+    <h2>3. Uniqueness Selectors</h2>
+    <div class="unique-box">
+      <h3>Title Heading</h3>
+      <p>I am the only paragraph inside this container (Only of Type)!</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="demo-container">
+    <h2>4. Content Tracking (:empty)</h2>
+    <p>Below are three dynamic alert boxes. The middle one has no content, so it will be hidden automatically by CSS.</p>
+    
+    <div class="alert-box">Alert 1: Processing complete.</div>
+    <div class="alert-box"></div> <div class="alert-box">Alert 3: System operational.</div>
+  </section>
+
+</body>
+</html>

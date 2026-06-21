@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Logical Pseudo-Classes Demo</title>
+  <link rel="stylesheet" href="19.css">
+</head>
+<body>
+
+  <h1>CSS Logical Pseudo-Classes (:is, :where, :not, :has)</h1>
+  <hr>
+
+  <section class="demo-card target-container">
+    <h2>1. Match-Any Grouping (:is)</h2>
+    <p>This is a standard text paragraph nested inside our target zone.</p>
+    <ul>
+      <li>This is a nested list item element.</li>
+      <li>Another nested list item element.</li>
+    </ul>
+    <span>This is a standalone span element (not styled by the group).</span>
+  </section>
+
+  <hr>
+
+  <section class="demo-card fallback-container">
+    <h2>2. Specificity-Free Grouping (:where)</h2>
+    <p>This text receives a baseline color rule via the zero-specificity :where selector.</p>
+    <p class="override-text">This paragraph effortlessly overrides it using a single standard class name.</p>
+  </section>
+
+  <hr>
+
+  <section class="demo-card exclusion-container">
+    <h2>3. The Negation Operator (:not)</h2>
+    <div class="form-group">
+      <label>Standard Text Input Field:</label>
+      <input type="text" value="Styled globally (Not a password field)">
+    </div>
+    <div class="form-group">
+      <label>Secure Password Field:</label>
+      <input type="password" value="secretpassword">
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="demo-card relational-container">
+    <h2>4. The Parent Selector (:has)</h2>
+    <p>The card components below are identical containers, but their background fills dynamically switch depending on what type of element is nested inside them.</p>
+    
+    <div class="parent-box">
+      <h4>Box Alpha</h4>
+      <span class="child-indicator">I am a nested span element child!</span>
+    </div>
+
+    <div class="parent-box">
+      <h4>Box Beta</h4>
+      <p>I am just a normal nested paragraph element child.</p>
+    </div>
+  </section>
+
+</body>
+</html>

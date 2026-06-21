@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Elements Example</title>
+</head>
+<body>
+
+    <form>
+        <h3>Select Your Preferred Track (Choose One)</h3>
+        
+        <input type="radio" id="gui" name="tech_group" value="GUI">
+        <label for="gui"><b>Graphical User Interface (GUI)</b></label>
+        <br>
+
+        <input type="radio" id="backend" name="tech_group" value="Backend">
+        <label for="backend"><b>Backend Development</b></label>
+        <br>
+
+        <input type="radio" id="ml" name="tech_group" value="ML">
+        <label for="ml"><b>Machine Learning</b></label>
+        <br><br>
+
+
+        <h3>Select Languages You Know (Choose Multiple)</h3>
+        
+        <input type="checkbox" id="c_lang" name="lang_c" value="C">
+        <label for="c_lang">C Programming Language</label>
+        <br>
+
+        <input type="checkbox" id="cpp_lang" name="lang_cpp" value="CPP">
+        <label for="cpp_lang">C++ Language Profile</label>
+        <br>
+
+        <input type="checkbox" id="java_lang" name="lang_java" value="Java">
+        <label for="java_lang">Java Enterprise Language</label>
+        <br><br>
+
+
+        <input type="button" id="proceed_btn" value="Proceed" onclick="alert('Hello World! Processing your form.');">
+        
+        <input type="button" id="cancel_btn" value="Cancel" onclick="alert('Action canceled.');">
+    </form>
+
+</body>
+</html>

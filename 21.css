@@ -1,0 +1,62 @@
+/*1. ::before and ::after Examples*/
+
+/* Adds a decorative star symbol before the paragraph text */
+.branding-text::before {
+  content: "★ ";
+  color: #ffab00;
+  font-size: 1.2em;
+  margin-right: 4px;
+}
+
+/* Appends text branding dynamically after the paragraph text */
+.branding-text::after {
+  content: " | Empowering Careers";
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* Adds an icon inside a button before and after the label text */
+.action-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.action-btn::before {
+  content: "🔗 ";
+  margin-right: 8px;
+}
+
+.action-btn::after {
+  content: "";
+  margin-left: 8px;
+}
+
+
+/*2. ::marker Example*/
+
+/* Customizes the color and size of list bullets */
+.custom-bullets li::marker {
+  color: #0000ff;
+  font-size: 1.5em;
+}
+
+
+/*3. ::column Layout Example*/
+
+/* Creates a 3-column text layout */
+.multi-column-layout {
+  column-count: 3;
+  column-gap: 30px;
+  column-rule: 1px solid #ddd;
+  padding: 20px;
+}
+
+/* Styles individual column fragments inside a multi-column container */
+.multi-column-layout::column {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}

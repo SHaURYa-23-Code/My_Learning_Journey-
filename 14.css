@@ -1,0 +1,108 @@
+/* Global Setup */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.demo-section {
+  padding: 20px 0;
+}
+
+/* ==========================================================================
+   1. PSEUDO-ELEMENTS (Uses Double Colon ::)
+   Modifies or injects specific structural pieces of an element.
+   ========================================================================== */
+
+/* Styles only the very first letter of the first paragraph */
+.blog-post p:first-of-type::first-letter {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  float: left;
+  margin-right: 8px;
+  line-height: 1;
+}
+
+/* Styles only the very first line of the first paragraph */
+.blog-post p:first-of-type::first-line {
+  font-weight: 600;
+  color: #34495e;
+}
+
+/* Customizes the look of highlighted/selected text on the page */
+::selection {
+  background-color: #f1c40f;
+  color: #000;
+}
+
+
+/* ==========================================================================
+   2. PSEUDO-CLASSES (Uses Single Colon :)
+   Modifies entire elements based on user interaction or DOM state.
+   ========================================================================== */
+
+/* :focus - Changes input styling when clicked into */
+.form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  background-color: #fff;
+}
+
+/* :disabled - Diminishes components that are non-interactive */
+.form-group input:disabled {
+  background-color: #eedede;
+  color: #7f8c8d;
+  border-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* :hover - Triggers visual change when tracking over the button */
+.btn-submit:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+/* :active - Triggers visual change at the exact moment of a click */
+.btn-submit:active {
+  background-color: #1f6391;
+  transform: translateY(1px);
+}
+
+
+/* Structural layout helpers */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  background-color: #fafafa;
+}
+
+.btn-submit {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.1s ease;
+}

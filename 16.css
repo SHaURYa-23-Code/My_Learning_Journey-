@@ -1,0 +1,81 @@
+/* Global Setup */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+.demo-container {
+  padding: 15px 0;
+}
+
+/* 1. CHILD-BASED VS TYPE-BASED SELECTORS*/
+
+/* :first-child targets the element ONLY if it is the absolute first child */
+.mixed-box span:first-child {
+  color: #e67e22;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* This fails to style Paragraph 1 because the span is the actual first-child */
+.mixed-box p:first-child {
+  background-color: red; 
+}
+
+/* :first-of-type safely targets the first <p> by filtering out the span */
+.mixed-box p:first-of-type {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* :last-child targets the absolute last item */
+.mixed-box p:last-child {
+  text-decoration: underline;
+  color: #2c3e50;
+}
+
+
+/*2. NTH-CHILD FORMULAS & CYCLES*/
+
+/* Appends an alternating background to all even rows (Zebra Striping) */
+.item-list li:nth-child(even) {
+  background-color: #f2f4f4;
+}
+
+/* Targets a recurring pattern (Every 3rd item: Row 3, Row 6, etc.) */
+.item-list li:nth-child(3n) {
+  border-right: 5px solid #3498db;
+  padding-left: 5px;
+}
+
+
+/* 3. UNIQUENESS SELECTORS */
+
+/* Styles the paragraph since it is the single, solitary <p> tag inside the box */
+.unique-box p:only-of-type {
+  background-color: #e8f8f5;
+  padding: 10px;
+  border-left: 4px solid #1abc9c;
+}
+
+
+/* 4. CONTENT TRACKING (:empty) */
+
+/* Base styling for valid alert messages */
+.alert-box {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+/* :empty automatically catches empty markup elements and safely collapses them */
+.alert-box:empty {
+  display: none;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Sibling and Group Selectors Demo</title>
+  <link rel="stylesheet" href="13.css">
+</head>
+<body>
+
+  <h1>CSS Selectors: Sibling & Grouping</h1>
+  <hr>
+
+  <section class="content-area">
+    <h2>1. Group Selector Demo</h2>
+    <p>This paragraph, the h2 heading above, and the h3 heading below all share a unified color scheme and typography because they are grouped together in the CSS.</p>
+    <h3>Sub-heading inside the group</h3>
+  </section>
+
+  <hr>
+
+  <section class="sibling-area">
+    <h2>2. General Sibling Selector Demo</h2>
+    
+    <p class="before-element">I am a paragraph BEFORE the trigger element. (I remain unstyled).</p>
+    
+    <div class="trigger-box">
+      <strong>[Reference Element]</strong> Any paragraph element following me inside this section will change.
+    </div>
+
+    <p>I am a sibling paragraph AFTER the trigger box. (Styled Red & Bold!)</p>
+    
+    <span class="intervening-element">I am an intervening Span tag. (I am skipped over by the selector).</span>
+    
+    <p>I am ANOTHER sibling paragraph further down the line. (Also Styled Red & Bold!)</p>
+  </section>
+
+</body>
+</html>

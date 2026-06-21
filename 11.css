@@ -1,0 +1,8 @@
+/* General-sibling selector: select p elements that appear AFTER an h2 sibling */
+h2 ~ p {
+	color: red;
+}
+
+/* Minimal spacing for demo */
+div.demo { margin: 1rem 0; padding: 0.5rem; border: 1px dashed #ddd; }
+

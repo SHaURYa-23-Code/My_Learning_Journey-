@@ -1,0 +1,53 @@
+
+.margin-box {
+    width: 400px;
+    padding: 15px;
+    background-color: white;       /* White structural fill */
+    border: 2px solid blue;       /* Clear blue box boundary walls */
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Drop shadow decoration */
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+/*Shorthand Margin Parameters*/
+
+/* 1 Value: Applies an identical spacing gap across all 4 outside boundaries */
+.margin1 {
+    margin: 20px;
+}
+
+/* 2 Values: 1st controls Top/Bottom | 2nd controls Left/Right */
+.margin2 {
+    margin: 20px 40px;
+}
+
+/* 3 Values: Top (10px) | Left & Right matched (200px) | Bottom (30px) */
+.margin3 {
+    margin: 10px 200px 30px;
+}
+
+/* 4 Values: Strict clockwise path (Top -> Right -> Bottom -> Left) */
+.margin4 {
+    margin: 5px 10px 15px 20px;
+}
+
+
+/*Longhand Side Selection Controls*/
+
+/* Pushes element cleanly away from the left boundary only */
+.box-left {
+    margin-left: 40px;
+}
+
+/* Pushes element cleanly away from the right boundary only */
+.box-right {
+    margin-right: 40px;
+}
+
+/* Combines explicit side selections to break element out uniformly */
+.box-both {
+    margin-left: 40px;
+    margin-right: 40px;
+}

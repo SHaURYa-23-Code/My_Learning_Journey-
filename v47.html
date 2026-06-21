@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Progress vs Range Demo</title>
+</head>
+<body>
+
+    <h2>HTML Progress and Range Tags</h2>
+    <p>This page highlights the differences between an output display bar and an interactive input slider.</p>
+
+    <h3>1. Progress Bar Element</h3>
+    <label for="file-upload">File Upload Status (Static/Non-interactive):</label><br>
+    <progress id="file-upload" value="70" max="100"></progress> <span>70%</span>
+    <p><small><em>Note: Users cannot click or slide this bar. It is strictly used to display completion status [00:00:43].</em></small></p>
+
+    <br><hr><br>
+
+    <h3>2. Input Range Element</h3>
+    <form action="#">
+        <label for="volume">Adjust Volume Level (Interactive Slider):</label><br>
+        <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+        
+        <p><small><em>Note: Users can grab the handle and drag it left or right. This data will be sent when the form is submitted [00:01:45].</em></small></p>
+        
+        <br>
+        <button type="submit">Submit Value</button>
+    </form>
+
+</body>
+</html>

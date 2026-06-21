@@ -1,0 +1,55 @@
+/* --- 1. CORE DISPLAY PROPERTIES --- */
+
+/* Block display: Forces next line break [00:05:29] */
+.block {
+    display: block;
+}
+
+/* Inline display: Stays in the exact same line text flow [00:05:29] */
+.inline {
+    display: inline;
+}
+
+/* Inline-Block layout: Merges behavior (Inline flow + Block dimensions) [00:11:14] */
+.inline-block {
+    display: inline-block;
+    width: 150px;       /* Custom width allowed [00:09:46] */
+    height: 40px;       /* Custom height allowed [00:09:59] */
+    margin: 10px;       /* Margin separation gaps visible at [00:09:34] */
+    background-color: lightcoral;
+    text-align: center;
+}
+
+/* None display: Completely clears out visibility and layout position [00:13:10] */
+.none {
+    display: none;
+}
+
+
+/* --- 2. CSS TABLE LAYOUT REPRESENTATION --- */
+
+/* Emulating dynamic table wrappers purely through CSS rules [00:15:56] */
+.table {
+    display: table;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    border: 1px solid #333; /* Cells border grid visible at [00:17:56] */
+    padding: 10px;          /* Cell interior spacing padding [00:18:02] */
+    background-color: #f9f9f9;
+}
+
+
+/* --- 3. CUSTOM PARAGRAPH TYPOGRAPHY EFFECT --- */
+
+/* First line pseudo-element layout styling seen at [00:18:36] */
+p::first-line {
+    font-weight: bold;
+}

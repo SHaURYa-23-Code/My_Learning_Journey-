@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid place-items Tutorial - Session 8</title>
+    <link rel="stylesheet" href="47.css">
+</head>
+<body>
+
+    <h1>CSS Grid Dual Axis Alignment (place-items) Live Demo</h1>
+
+    <h2>1. place-items: start center (Top Vertical / Middle Horizontal)</h2>
+    <div class="grid-container grid-cols-3 grid-rows-tall grid-place-start-center">
+        <div class="grid-box">Alpha</div>
+        <div class="grid-box">Beta Container</div>
+        <div class="grid-box">Gamma</div>
+    </div>
+
+    <h2>2. place-items: end start (Bottom Vertical / Left Horizontal)</h2>
+    <div class="grid-container grid-cols-3 grid-rows-tall grid-place-end-start">
+        <div class="grid-box">Alpha</div>
+        <div class="grid-box">Beta Container</div>
+        <div class="grid-box">Gamma</div>
+    </div>
+
+    <h2>3. place-items: center center (Dead Center Alignment)</h2>
+    <div class="grid-container grid-cols-3 grid-rows-tall grid-place-center-center">
+        <div class="grid-box">Alpha</div>
+        <div class="grid-box">Beta Container</div>
+        <div class="grid-box">Gamma</div>
+    </div>
+
+    <h2>4. place-items: stretch stretch (Default Full Boundaries Expansion)</h2>
+    <div class="grid-container grid-cols-3 grid-rows-tall grid-place-stretch-stretch">
+        <div class="grid-box">Alpha</div>
+        <div class="grid-box">Beta Container</div>
+        <div class="grid-box">Gamma</div>
+    </div>
+
+</body>
+</html>

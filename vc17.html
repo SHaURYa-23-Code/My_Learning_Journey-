@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Form States & Validation Demo</title>
+  <link rel="stylesheet" href="17.css">
+</head>
+<body>
+
+  <h1>Form Validation & Input State Demo</h1>
+  <hr>
+
+  <form class="demo-form" onsubmit="event.preventDefault();">
+    
+    <fieldset>
+      <legend>1. Constraint Necessity (:required & :optional)</legend>
+      
+      <div class="form-group">
+        <label for="user-name">Full Name (Required Field):</label>
+        <input type="text" id="user-name" required placeholder="Shaurya">
+      </div>
+
+      <div class="form-group">
+        <label for="user-bio">Short Bio (Optional Field):</label>
+        <input type="text" id="user-bio" placeholder="Tell us about yourself.!">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>2. Real-Time Validation (:valid & :invalid)</legend>
+      
+      <div class="form-group">
+        <label for="user-email">Email Address (Type a valid structure):</label>
+        <input type="email" id="user-email" required placeholder="abc@example.com">
+        <span class="error-msg">Please enter a valid email layout containing an '@' symbol.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="user-code">Employee Code (Pattern Match: Digits Only):</label>
+        <input type="text" id="user-code" pattern="\d+" required placeholder="12345">
+        <span class="error-msg">Error: Only numeric digits are allowed here!</span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>3. Boundary Tracking (:in-range & :out-of-range)</legend>
+      
+      <div class="form-group">
+        <label for="user-age">Age Limit (Must be between 10 and 30):</label>
+        <input type="number" id="user-age" min="10" max="30" value="15">
+        <span class="range-msg">Value is outside the permissible 10-30 scope!</span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>4. System Choice Selection (:default)</legend>
+      <p>The initial option outlined below is flagged dynamically via CSS because it contains the structural 'checked' tag layout upon load.</p>
+      
+      <label class="radio-label">
+        <input type="radio" name="color-theme" value="red" checked> Pre-Selected Red Theme
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="color-theme" value="blue"> Blue Theme
+      </label>
+    </fieldset>
+
+    <button type="submit" class="btn-submit">Submit Form</button>
+  </form>
+
+</body>
+</html>

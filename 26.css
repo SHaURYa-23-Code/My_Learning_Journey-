@@ -1,0 +1,55 @@
+/* Named Colors Group */
+.named-red {
+  color: red;
+}
+
+.named-blue {
+  color: rgb(255, 165, 0); /* Note: As shown in the video editor, this was being modified to an orange color during testing */
+  background-color: steelblue;
+}
+
+.named-green {
+  color: green;
+}
+
+.named-yellow {
+  color: orange;
+  background-color: #fff9db; 
+}
+
+/* Hexadecimal Colors Group */
+.hex-red {
+  background-color: #ff0000;
+  color: white;
+}
+
+.hex-green {
+  background-color: #00ff00;
+  color: black;
+}
+
+.hex-blue {
+  background-color: #0000ff;
+  color: white;
+}
+
+.hex-purple {
+  background-color: #800080;
+  color: white;
+}
+
+/* RGB Colors Group */
+.rgb-red {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+.rgb-green {
+  background-color: rgb(0, 255, 0);
+  color: black;
+}
+
+.rgb-blue {
+  background-color: rgb(0, 0, 255);
+  color: white;
+}

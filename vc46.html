@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid align-items Tutorial - Session 7</title>
+    <link rel="stylesheet" href="46.css">
+</head>
+<body>
+
+    <h1>CSS Grid Vertical Alignment (align-items) Live Demo</h1>
+
+    <h2>1. align-items: start (Pinned to Top of Grid Cell)</h2>
+    <div class="grid-parent grid-cols-three grid-row-tall grid-align-items-start">
+        <div class="grid-cell">Cell Alpha</div>
+        <div class="grid-cell">Cell Beta (Text)</div>
+        <div class="grid-cell">Cell Gamma</div>
+    </div>
+
+    <h2>2. align-items: center (Vertically Centered inside Grid Cell)</h2>
+    <div class="grid-parent grid-cols-three grid-row-tall grid-align-items-center">
+        <div class="grid-cell">Cell Alpha</div>
+        <div class="grid-cell">Cell Beta (Text)</div>
+        <div class="grid-cell">Cell Gamma</div>
+    </div>
+
+    <h2>3. align-items: end (Pinned to Bottom of Grid Cell)</h2>
+    <div class="grid-parent grid-cols-three grid-row-tall grid-align-items-end">
+        <div class="grid-cell">Cell Alpha</div>
+        <div class="grid-cell">Cell Beta (Text)</div>
+        <div class="grid-cell">Cell Gamma</div>
+    </div>
+
+    <h2>4. align-items: stretch (Default Box Behavior - Spans Full Track Height)</h2>
+    <div class="grid-parent grid-cols-three grid-row-tall grid-align-items-stretch">
+        <div class="grid-cell">Cell Alpha</div>
+        <div class="grid-cell">Cell Beta (Text)</div>
+        <div class="grid-cell">Cell Gamma</div>
+    </div>
+
+</body>
+</html>

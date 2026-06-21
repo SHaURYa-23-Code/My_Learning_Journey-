@@ -1,0 +1,56 @@
+/* ==========================================
+   Global Configuration & Layout Basics
+   ========================================== */
+
+/* Universal setup applied across all standard sample blocks */
+.box {
+    width: 300px;
+    height: 150px;
+    margin: 60px; /* Generous spacing prevents outlines from overlapping nearby boxes */
+    padding: 50px;
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Keeps dimensions stable regardless of padding */
+}
+
+
+/* ==========================================
+   Outline Property Demonstrations
+   ========================================== */
+
+/* Example 1: Shorthand Outline Variant */
+.outline1 {
+    /* Reference inner boundary line */
+    border: 10px solid black; 
+    
+    /* Shorthand Structure -> outline: [width] [style] [color]; */
+    outline: thin solid green; 
+}
+
+/* Example 2: Massive Double Outline Effect */
+.outline4 {
+    border: 1px solid black;
+    
+    /* Using longhand properties for explicit clarity */
+    outline-width: 25px;
+    outline-style: double;
+    outline-color: purple;
+}
+
+/* Example 3: Pushing the Outline Line Away from the Border Box */
+.outline-offset-positive {
+    border: 10px solid black;
+    outline: 4px dashed blue;
+    
+    /* Creates a 50px physical transparent gap between border and outline */
+    outline-offset: 20px; 
+}
+
+/* Example 4: Pulling the Outline Line Inside the Element Content Layer */
+.outline-offset-negative {
+    border: 10px solid black;
+    outline: 4px solid red;
+    
+    /* Pulls the outline 50px inwards. Since padding is 50px, it perfectly hugs the text */
+    outline-offset: -50px; 
+}

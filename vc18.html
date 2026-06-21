@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Form Editability States Demo</title>
+  <link rel="stylesheet" href="18.css">
+</head>
+<body>
+
+  <h1>Form Editability & Presentation States</h1>
+  <hr>
+
+  <form class="demo-form" onsubmit="event.preventDefault();">
+    
+    <fieldset>
+      <legend>1. Editability Status (:read-only & :read-write)</legend>
+      
+      <div class="form-group">
+        <label for="editable-input">Standard Field (User Editable / Read-Write):</label>
+        <input type="text" id="editable-input" value="You can edit or change this text freely.">
+      </div>
+
+      <div class="form-group">
+        <label for="locked-input">System Reference ID (Locked / Read-Only):</label>
+        <input type="text" id="locked-input" value="SYS-911-XXX" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="editable-textarea">Editable Feedback Area:</label>
+        <textarea id="editable-textarea" rows="2">Feel free to type comments here...</textarea>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>2. Hint Presentation Tracking (:placeholder-shown)</legend>
+      <p>The first field will remain uniquely styled as long as you haven't typed anything inside it yet.</p>
+      
+      <div class="form-group">
+        <label for="hint-input">Input with active placeholder text:</label>
+        <input type="text" id="hint-input" placeholder="Type a single letter to remove this style hint...">
+      </div>
+
+      <div class="form-group">
+        <label for="no-hint-input">Input without any placeholder attribute value:</label>
+        <input type="text" id="no-hint-input" value="Initial text content value present">
+      </div>
+    </fieldset>
+
+  </form>
+
+</body>
+</html>

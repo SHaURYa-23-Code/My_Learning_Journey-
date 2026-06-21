@@ -1,0 +1,66 @@
+/* Base Container Style used across all blocks in the video */
+.container {
+    width: 90%;
+    max-width: 700px;
+    min-height: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    background-image: url('download2.jpg'); /* Replace with your image file path */
+    background-repeat: no-repeat;
+    background-size: 80px 80px; /* Forces uniform size as mentioned at [00:05:54] */
+}
+
+/* --- KEYWORD BASED POSITIONS --- */
+
+/* Keyword 1: Left Top corner [00:04:19] */
+.position-keyword-1 {
+    background-position: left top;
+}
+
+/* Keyword 2: Perfectly Centered [00:04:22] */
+.position-keyword-2 {
+    background-position: center center;
+}
+
+/* Keyword 3: Right Bottom corner [00:04:35] */
+.position-keyword-3 {
+    background-position: right bottom;
+}
+
+
+/* --- PIXEL (LENGTH) BASED POSITIONS --- */
+
+/* Pixel Position 1: 20px from Left, 35px from Top [00:07:01] */
+.position-px-1 {
+    background-position: 20px 35px;
+}
+
+/* Pixel Position 2: 50px from Left, 100px from Top [00:07:11] */
+.position-px-2 {
+    background-position: 50px 100px;
+}
+
+/* Pixel Position 3: 100px from Left, 50px from Top [00:07:16] */
+.position-px-3 {
+    background-position: 100px 50px;
+}
+
+
+/* --- PERCENTAGE BASED POSITIONS --- */
+
+/* Percent Position 1: Top-Left Corner (0% 0%) [00:07:36] */
+.position-percent-1 {
+    background-position: 0% 0%;
+}
+
+/* Percent Position 2: Centered Area (50% 50%) [00:07:47] */
+.position-percent-2 {
+    background-position: 50% 50%;
+}
+
+/* Percent Position 3: Bottom-Right Corner (100% 100%) [00:07:50] */
+.position-percent-3 {
+    background-position: 100% 100%;
+}

@@ -1,0 +1,41 @@
+/* Basic styling for the container boxes */
+.example {
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+/* 1. Overflow Visible (Default) - Content spills outside the box */
+.overflow-visible {
+    overflow: visible;
+}
+
+/* 2. Overflow Hidden - Spilled content is clipped and hidden */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* 3. Overflow Scroll - Always shows scrollbars (even if not needed) */
+.overflow-scroll {
+    overflow: scroll;
+}
+
+/* 4. Overflow Auto - Scrollbars appear automatically only if content overflows */
+.overflow-auto {
+    overflow: auto;
+}
+
+/* 5. Custom Axis Control */
+.overflow-custom-x {
+    overflow-x: scroll; /* Horizontal scrollbar enabled */
+    overflow-y: hidden; /* Vertical scrollbar hidden */
+    white-space: nowrap; /* Forces text to stay on one line to trigger horizontal overflow */
+}
+
+.overflow-custom-y {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Internal CSS Example</title>
+	<style>
+		/* Internal CSS lives inside this <style> tag */
+		:root { --primary: #2563eb; --muted: #6b7280; --card: #ffffff; }
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+			background: #f3f4f6;
+			color: #111827;
+			line-height: 1.5;
+		}
+		header {
+			background: var(--primary);
+			color: white;
+			padding: 1rem 1.25rem;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Internal CSS Demo</h1>
+	</header>
+
+	<main class="wrap">
+		<section class="card">
+			<h2>What is internal CSS?</h2>
+			<p>Internal CSS is style rules placed inside a <code>&lt;style&gt;</code> tag in the document head. Use it when styles are page-specific.</p>
+		</section>
+	</main>
+</body>
+</html>
+

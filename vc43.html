@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template and grid-template-areas - Session 4</title>
+    <link rel="stylesheet" href="43.css">
+</head>
+<body>
+
+    <h3>1. Explicit Fixed Row Tracking Setup</h3>
+    <div class="grid-container rows-fixed">
+        <div class="grid-item">Row Item 1 (100px Height)</div>
+        <div class="grid-item">Row Item 2 (200px Height)</div>
+        <div class="grid-item">Row Item 3 (100px Height)</div>
+    </div>
+
+    <h3>2. Combined Shorthand Grid Template Macro</h3>
+    <div class="grid-container macro-shorthand-layout">
+        <div class="grid-item">Row 1 / Col 1</div>
+        <div class="grid-item">Row 1 / Col 2</div>
+        <div class="grid-item">Row 2 / Col 1</div>
+        <div class="grid-item">Row 2 / Col 2</div>
+        <div class="grid-item">Row 3 / Col 1</div>
+        <div class="grid-item">Row 3 / Col 2</div>
+    </div>
+
+    <h3>3. Area Template Layout Block (3-Column Matrix)</h3>
+    <div class="grid-area-container complex-area-layout">
+        <div class="component-header">Site Header Area (Spans 3 Columns)</div>
+        <div class="component-main">Main Dynamic Content Section (Spans 3 Columns)</div>
+        <div class="component-footer">Footer Space Alpha</div>
+        <div class="component-footer">Footer Space Beta</div>
+        <div class="component-sidebar">Sidebar Track Omega</div>
+    </div>
+
+</body>
+</html>

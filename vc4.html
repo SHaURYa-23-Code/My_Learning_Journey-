@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors All in One</title>
+    <style>
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body Selector */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            padding: 24px;
+            line-height: 1.6;
+        }
+
+        /* Element Selector */
+        h1 {
+            color: #b45309;
+            margin-bottom: 12px;
+        }
+
+        /* Element Selector */
+        p {
+            color: #374151;
+            margin-bottom: 12px;
+        }
+
+        /* Class Selector */
+        .card {
+            max-width: 820px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 20px;
+            margin: 0 auto 18px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+        }
+
+        /* Class Selector */
+        .highlight {
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 10px 14px;
+            border-left: 4px solid #2563eb;
+            border-radius: 8px;
+        }
+
+       /* Descendant Selector*/
+        .card .highlight {
+            background: #ecfdf5;
+            color: #065f46;
+            border-left-color: #10b981;
+        }
+
+            /* Child Selector (direct children only):
+               .parent > p will style only p elements that are direct children of .parent.
+               Nested paragraphs inside other elements within .parent will not match. */
+            .parent > p {
+                color: #2563eb; /* blue for direct children */
+                font-weight: 600;
+            }
+
+        /* ID Selector */
+        #title {
+            color: #047857;
+            font-size: 2rem;
+        }
+
+        /* ID Selector */
+        #special-note {
+            color: #7c3aed;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <main class="page-shell">
+        <section class="card" id="intro-card">
+            <h1 id="title">CSS Selectors Demo</h1>
+            <p>
+                This page shows <strong>universal</strong>, <strong>body</strong>, <strong>element</strong>,
+                <strong>class</strong>, and <strong>id</strong> selectors working together.
+            </p>
+        </section>
+
+        <section class="card note-box">
+            <h1>Selector Examples</h1>
+            <p class="highlight">This paragraph uses a class selector.</p>
+            <p id="special-note">This paragraph uses an ID selector.</p>
+        </section>
+        <!-- Contrast paragraph: not inside a .card -> descendant rules won't apply -->
+        <section>
+            <p class="highlight">This <strong>highlight</strong> paragraph is NOT inside a <code>.card</code>.</p>
+        </section>
+
+        <!-- Child selector demo supplied by user: direct children of .parent become blue -->
+        <section class="card">
+            <div class="parent">
+                <p>This WILL be blue (Direct Child).</p>
+                <p>This WILL ALSO be blue (Direct Child).</p>
+                
+                <div>
+                    <p>This will NOT be blue (Grandchild / Nested Child).</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+</body>
+</html>

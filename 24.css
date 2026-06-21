@@ -1,0 +1,62 @@
+/* Base styling to enlarge text frames for shadow clarity */
+.bigfontsize {
+  font-size: px;
+  font-family: 'Arial Black', sans-serif;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.container {
+  padding: 10px;
+}
+
+/* =======================================================
+   TEXT-SHADOW SYNTAX: offset-x offset-y blur-radius color 
+   ======================================================= */
+
+/* Shadow 1: Hard Shadow (No Blur, No Color specified)
+   Defaults directly to a solid black copy offset down-right */
+.shadow1 {
+  text-shadow: 5px 5px;
+  background-color: #f9f33b;
+}
+
+/* Shadow 2: Hard Shadow with Blur (No Color specified)
+   Edges are softly blurred, defaults to black color overlay */
+.shadow2 {
+  text-shadow: 5px 5px 5px;
+  background-color: #f9f33b;
+}
+
+/* Shadow 3: Soft Blur with Red Accent Color 
+   An explicit color value overrides the default black shadow */
+.shadow3 {
+  color: #333;
+  background-color: #f9f33b;
+  text-shadow: 5px 5px 5px red;
+}
+
+/* Shadow 4: Multi-Layer Custom Offset Glow Stacking
+   Separated by commas to combine distinct white, yellow, and pink shadows */
+.shadow4 {
+  color: #222;
+  background-color: #f9f33b;
+  text-shadow: 
+    5px 5px 5px white, 
+    10px 10px 5px rgb(255, 55, 0), 
+    15px 15px 5px pink;
+}
+
+/* Shadow 5: Extreme Multi-Layer Shadow Trail Tracking
+   Demonstrates deep cascading effects using sequential coordinate sets */
+.shadow5 {
+  color: #fff;
+  background-color: #f9f33b; /* Adding contrast for white text */
+  text-shadow: 
+    1px 1px 2px black, 
+    2px 2px 4px blue, 
+    3px 3px 6px red, 
+    4px 4px 8px yellow, 
+    5px 5px 10px green;
+}
+

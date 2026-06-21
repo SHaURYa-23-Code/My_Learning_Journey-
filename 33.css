@@ -1,0 +1,47 @@
+/* ==========================================
+   Global Reset & Box Baseline Properties
+   ========================================== */
+
+/* The instructor sets this to keep element dimensions predictable */
+* {
+    box-sizing: border-box; 
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Base structural look applied across all example boxes */
+.box {
+    border: 3px solid blue;       /* Blue solid outline */
+    border-radius: 10px;          /* Curved border edges */
+    margin-bottom: 20px;
+    background-color: #f0f4f8;    /* Pale bluish background fill */
+}
+
+
+/* ==========================================
+   Padding Value Configurations
+   ========================================== */
+
+/* 3 Parameters Demonstration (Mentioned in the stylesheet source) */
+.padding-three {
+    /* Top: 10px | Left/Right: 20px | Bottom: 30px */
+    padding: 10px 20px 30px; 
+}
+
+/* 4 Parameters Shorthand (Clockwise: Top -> Right -> Bottom -> Left) */
+.padding-four {
+    /* Top: 10px | Right: 15px | Bottom: 20px | Left: 25px */
+    padding: 10px 15px 20px 25px; 
+}
+
+/* Individual Longhand Properties */
+.padding-individual {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}

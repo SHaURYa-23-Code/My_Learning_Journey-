@@ -1,0 +1,80 @@
+/* Global Reset and Layout Setup */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 650px;
+  margin: 20px auto;
+  padding: 0 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+/*1. EDITABILITY PSEUDO-CLASSES (:read-write & :read-only)*/
+
+/* Appends an explicit light blue outline highlight to any open editable field */
+input:read-write,
+textarea:read-write {
+  background-color: #ffffff;
+  border-color: #3498db;
+}
+
+/* Gray out, locks the cursor, and structures fields holding unalterable details */
+input:read-only,
+textarea:read-only {
+  background-color: #e0e0e0;
+  color: #888;
+  border-color: #bdbdbd;
+  font-style: italic;
+  cursor: not-allowed;
+}
+
+
+/*2. PRESENTATION STATE (:placeholder-shown)*/
+
+/* Isolates an input strictly when its baseline structural placeholder message is visible */
+input:placeholder-shown {
+  border-color: #e67e22;
+  background-color: #fdfaf7;
+  font-weight: normal;
+}
+
+/* Example styling adjustment if a focus behavior interacts with an active placeholder */
+input:placeholder-shown:focus {
+  box-shadow: 0 0 5px rgba(230, 126, 34, 0.5);
+  outline: none;
+}

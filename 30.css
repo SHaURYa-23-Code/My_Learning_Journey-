@@ -1,0 +1,57 @@
+/* Defines a fixed square size for all structural boxes */
+.container {
+    width: 300px;
+    height: 300px;
+}
+
+/* Adds spacing outside the boxes so they don't overlap */
+.margin {
+    margin: 30px;
+}
+
+/* Base utility class mentioned for standard 20px thickness */
+.wide-width {
+    border-width: 20px;
+}
+
+
+/* Border Property Demonstrations */
+
+/* Example 1: Combined Shorthand Method */
+.border1 {
+    /* Syntax: border: [width] [style] [color]; */
+    border: 40px dashed blue;
+}
+
+/* Example 2: Explicit Longhand Method */
+.border2 {
+    border-width: 20px;
+    border-style: double;
+    border-color: #333333;
+}
+
+/* Example 3: Clockwise Value Mapping (Top -> Right -> Bottom -> Left) */
+.border3 {
+    /* Top: 10px | Right: 10px | Bottom: 30px | Left: 40px */
+    border-width: 10px 10px 30px 40px; 
+    
+    /* Top: solid | Right: dashed | Bottom: dotted | Left: double */
+    border-style: solid dashed dotted double; 
+    
+    /* Applies distinct colors to each individual side sequentially */
+    border-color: #792e2e #089ba0 #471b1b #ee8686; 
+}
+
+/* Example 4: Targetting Specific Sides Separately */
+.border14 {
+    /* Left border: 2px solid black line */
+    border-left: 2px solid black;
+    
+    /* Right border: 2px solid red line */
+    border-right: 2px solid red;
+    
+    /* Top border: 4px dashed blue line */
+    border-top: 4px dashed #0000ff;
+    
+    /* Bottom side remains transparent/empty as no rule is set */
+}

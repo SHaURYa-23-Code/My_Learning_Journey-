@@ -1,0 +1,66 @@
+/* Core reusable background container style demonstrated in the project layout */
+.bg-container {
+    width: 100%;
+    min-height: 400px;
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px dashed #444;
+    background-color: #e0e0e0; /* Default fallback background color [00:01:07] */
+    
+    /* Applying the baseline image setup discussed at [00:04:16] */
+    background-image: url('"C:\\Users\\Shaurya\\OneDrive\\Desktop\\WorkSpace\\HTML\\charr.png"'); /* Target background image source file */
+}
+
+/* --- 1. HANDLING REPEAT CHARACTERISTICS --- */
+
+/* No Repeat - Displays the image asset exactly once [00:05:40] */
+.no-repeat-style {
+    background-repeat: no-repeat;
+}
+
+/* Repeat horizontally only (X-Axis) */
+.repeat-x-style {
+    background-repeat: repeat-x;
+}
+
+
+/* --- 2. PERCENTAGE-BASED BG SIZE CONTROLS --- */
+
+/* Constraining the size boundary to 50% scale [00:59:59] */
+.size-percent-50 {
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+/* Constraining the size boundary to 75% scale [01:00:05] */
+.size-percent-75 {
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+/* Expanding to fill 100% boundary [01:01:12] */
+.size-percent-100 {
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+/* --- 3. EXPLICIT DUAL LENGTH (WIDTH & HEIGHT) VALUES --- */
+
+/* Explicit scaling configuration 1: 100px Width, 50px Height [01:01:00] */
+.size-custom-1 {
+    background-repeat: no-repeat;
+    background-size: 100px 50px;
+}
+
+/* Explicit scaling configuration 2: 150px Width, 75px Height [01:01:06] */
+.size-custom-2 {
+    background-repeat: no-repeat;
+    background-size: 150px 75px;
+}
+
+/* Explicit scaling configuration 3: 200px Width, 100px Height [01:01:12] */
+.size-custom-3 {
+    background-repeat: no-repeat;
+    background-size: 200px 100px;
+}

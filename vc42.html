@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering CSS Grid Columns - Session 3</title>
+    <link rel="stylesheet" href="42.css">
+</head>
+<body>
+
+    <h3>1. Fixed Column Units (Pixels)</h3>
+    <div class="grid-container grid-px-four-calls">
+        <div class="grid-item">This is box of 100px</div>
+        <div class="grid-item">Test</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">Box</div>
+    </div>
+
+    <h3>2. Fractional Space Ratio Configuration (fr)</h3>
+    <div class="grid-container grid-fr-ratio">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies (Unbr9yMnTm4NSzvG9rrwjM2ec8xZgh1cafXH8)</div>
+        <div class="grid-item">Grid</div>
+        <div class="grid-item">Box Four</div>
+        <div class="grid-item">Box Five</div> </div>
+
+    <h3>3. Dynamic Percentage Configuration (25% / 50% / 25%)</h3>
+    <div class="grid-container grid-percent-three-cols">
+        <div class="grid-item">Percent 25% Column</div>
+        <div class="grid-item">Percent 50% Column Content</div>
+        </div>
+
+    <h3>4. Percentage Sizing with Repeat Wrapper (5 Columns at 20%)</h3>
+    <div class="grid-container grid-percent-five-cols container-yellow-color">
+        <div class="grid-item">20% Box 1</div>
+        <div class="grid-item">20% Box 2</div>
+        <div class="grid-item">20% Box 3</div>
+        <div class="grid-item">20% Box 4</div>
+        <div class="grid-item">20% Box 5</div>
+    </div>
+
+    <h3>5. Font-Relative Column Track Sizing (em)</h3>
+    <div class="grid-container grid-em-tracks">
+        <div class="grid-item">Track Alpha (20em)</div>
+        <div class="grid-item">Track Beta (30em)</div>
+    </div>
+
+    <h3>6. Min-Content Bound Paired with Auto and Fixed Sizing [00:42:19]</h3>
+    <div class="grid-container grid-min-content-fixed">
+        <div class="grid-item">Min Content</div>
+        <div class="grid-item">Auto Space Adjusting</div>
+        <div class="grid-item">Column with 200px</div>
+    </div>
+
+    <h3>7. Max-Content Layout Tracking [00:45:15]</h3>
+    <div class="grid-container grid-max-content-auto">
+        <div class="grid-item">This is a large content cell that wraps manually if expanded</div>
+        <div class="grid-item">Auto Filler Block</div>
+    </div>
+
+    <h3>8. MinMax Sizing Guardrails [00:47:48]</h3>
+    <div class="grid-container grid-minmax-tracks">
+        <div class="grid-item">Cell A</div>
+        <div class="grid-item">Cell B</div>
+        <div class="grid-item">Cell C</div>
+    </div>
+
+    <h3>9. Fit-Content Clamping Function [00:50:42]</h3>
+    <div class="grid-container grid-fit-content-track">
+        <div class="grid-item">Fit content padding text block layout calculation.</div>
+        <div class="grid-item">Remaining Fluid space filler (1fr)</div>
+    </div>
+
+</body>
+</html>

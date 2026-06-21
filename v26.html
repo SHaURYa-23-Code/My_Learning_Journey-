@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rowspan and Colspan Grid Layout</title>
+</head>
+<body>
+
+    <h2>Student Weekly Training Tracker</h2>
+
+    <table border="1" width="100%">
+        <caption>ChiPi Technologies Weekly Training Schedule</caption>
+        
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Session 1</th>
+                <th>Session 2</th>
+                <th>Trainer</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="2">Monday</td>
+                <td>HTML Basics</td>
+                <td>Lists & Tables</td>
+                <td rowspan="2">Mr. Rajiv</td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" align="center">Hands-on Lab Practice Session</td>
+            </tr>
+
+            <tr>
+                <td>Tuesday</td>
+                <td>CSS Styling</td>
+                <td>Box Model Grid</td>
+                <td>Mr. Arvind</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4" align="center">End of Weekly Core Modules</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

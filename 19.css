@@ -1,0 +1,93 @@
+/* Global Workspace Presentational Adjustments */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 0 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.demo-card {
+  padding: 15px 20px;
+  margin: 15px 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: #f8fafc;
+}
+
+h1, h2, h4 {
+  color: #1e293b;
+  margin-top: 0;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 2px solid #cbd5e1;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+/*1. THE MATCH-ANY FUNCTION (:is)*/
+
+/* Acts like an OR block. Styles paragraphs and list items inside the container,
+   leaving other elements like the span untouched. */
+.target-container :is(p, li) {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+
+/*2. THE ZERO-SPECIFICITY MATCHER (:where) */
+
+/* Matches paragraphs identically to :is(), but carries an active specificity value of 0 */
+.fallback-container :where(p) {
+  color: #e11d48;
+}
+
+/* Because the :where rule above has 0 specificity weight, a basic single class 
+   selector easily cancels it out without needing complex chain styling overrides */
+.override-text {
+  color: #16a34a;
+}
+
+
+/*3. THE NEGATION SELECTOR (:not)*/
+
+/* Targets and applies a blue border focus to all inputs, except password elements */
+.exclusion-container input:not([type="password"]) {
+  border-color: #0284c7;
+  background-color: #f0f9ff;
+}
+
+
+/* 4. THE PARENT & RELATION SELECTOR (:has)*/
+
+.parent-box {
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Traditional CSS looks down the DOM. :has() allows us to style the parent box 
+   itself based on the presence of a specific child condition inside it. */
+.parent-box:has(.child-indicator) {
+  border-color: #16a34a;
+  background-color: #f0fdf4;
+}
+
+.child-indicator {
+  display: block;
+  font-size: 13px;
+  color: #15803d;
+  font-weight: bold;
+}

@@ -1,0 +1,125 @@
+/* Container Layout Setup */
+.box-section {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  background-color: #f0f0f0; /* Light grey backdrop to show transparency */
+}
+
+/* Base Box Styling */
+.box {
+  width: 300px;
+  height: 150px;
+  padding: 20px;
+  border: 2px solid #333;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Solid Nested Button Layout */
+.btn {
+  background-color: #28a745; /* Solid Green */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Approach 1: Opacity Property
+   Flattens the entire layout tree (background + child items) */
+.opacity-box {
+  background-color: #ff0000; /* Pure Red */
+  opacity: 0.5;              /* Fades background, text, and button together */
+}
+
+/* Approach 2: RGBA Functional Transparency
+   Isolates transparency strictly to the element's background channel */
+.rgba-box {
+  /* 50% opacity targets ONLY the red background fill layer */
+  background-color: rgba(255, 0, 0, 0.5); 
+}
+
+
+/* =======================================================
+   ROOT CONFIGURATION (Sizing Anchor)
+   ======================================================= */
+html {
+  font-size: 16px; /* Base reference for all 'rem' units site-wide */
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* Global Heading using rem */
+.main-title {
+  font-size: 2.5rem; /* Exactly 40px (2.5 * 16px) */
+  text-align: center;
+  color: #2c3e50;
+}
+
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.unit-card {
+  padding: 1.5rem; /* 24px padding scaled globally */
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+/* =======================================================
+   UNIT IMPLEMENTATIONS
+   ======================================================= */
+
+/* px (Pixels) & pt (Points) */
+.box-px {
+  width: 300px; /* Absolutely fixed layout width on digital screens */
+  border-left: 5px solid #3498db; 
+}
+
+.text-pt {
+  font-size: 12pt; /* Traditional print scale mapping directly to paper layouts */
+}
+
+/* em (Parent-Relative Element Sizing) */
+.parent-box {
+  font-size: 20px; /* Modifying this value instantly alters children using em */
+  background: #eaeded;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.child-em {
+  /* Inherits from .parent-box (20px). 
+     Sizing evaluates to 20px * 1.5 = 30px */
+  font-size: 1.5em; 
+  border-left: 5px solid #2ecc71;
+}
+
+/* ch (Character Width) & ex (x-height Alignment) */
+.form-box {
+  border-left: 5px solid #9b59b6;
+}
+
+.text-ex {
+  /* Line spacing calculated dynamically based on the vertical height of a lowercase 'x' */
+  line-height: 2.5ex; 
+  margin-bottom: 1rem;
+}
+
+.input-ch {
+  display: block;
+  margin-top: 8px;
+  padding: 6px;
+  /* Perfectly sizes the text input box width to seamlessly hold exactly 
+     20 zero '0' character glyph lengths without clipping text inside */
+  width: 20ch; 
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}

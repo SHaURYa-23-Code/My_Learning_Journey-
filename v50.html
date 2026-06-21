@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChiPi Technologies - Student Registration</title>
+</head>
+<body>
+
+    <h2>ChiPi Technologies - Student Registration Form</h2>
+
+    <form action="#">
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="e.g., Ramesh Kumar" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" placeholder="e.g., ramesh@example.com" required><br><br>
+
+        <label for="mobile">Mobile Number:</label><br>
+        <input type="tel" id="mobile" name="mobile" placeholder="e.g., +91-9876543210" pattern="\+91-[0-5]{10}"><br>
+        <small>Format: +91- followed by 10 digits (restricted to 0-5 for demo pattern) [00:05:43]</small><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <label for="course">Select Course:</label><br>
+        <select id="course" name="course">
+            <option value="">--Please choose an option--</option>
+            <option value="java">Java Development</option>
+            <option value="frontend">Front-End Development</option>
+            <option value="react">React with Project</option>
+            <option value="dsa">Data Structures</option>
+            <option value="python">Python for Business</option>
+        </select><br><br>
+
+        <label for="timing">Preferred Batch Timing:</label><br>
+        <input type="text" id="timing" name="timing" placeholder="e.g., Weekend Morning / Evening"><br><br>
+
+        <label for="comments">Any Comments or Questions:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Write here..."></textarea><br><br>
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear Form</button>
+    </form>
+
+</body>
+</html>
